@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Protest Riot', sans-serif;
+}
+h1{
+    margin-top: 15px;
+    text-align: center;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+/* intro */
+
+.intro{
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.context{
+    text-align: center;
+    padding: 5%;
+    background:  rgba(108, 255, 108, 0.634);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(16, 192, 16);
+}
+
+.context>h1{
+    font-size: 75px;
+    margin-top: 15%;
+}
+
+.context>button{
+    padding: 10px;
+    min-width: 100px;
+    max-width: fit-content;
+    height: fit-content;
+    background: transparent;
+    border: 3px solid green;
+    border-radius: 15px;
+    margin:2% auto;
+    font-size: 20px;
+    
+}
+button>a{
+    text-decoration: none;
+    background:  rgba(108, 255, 108, 0.634);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px green;
+    
+
+}
+
+.intro-img{
+    background: url("./assests/Weather-bro.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* content */
+
+.content{
+    overflow-y: hidden;
+    height: 100vh;
+    max-width: 100vw;
+    width: 98vw;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.53),transparent,rgba(0, 0, 0, 0.53)),url("./assests/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns:35% 65%;
+    padding: 20px;
+    column-gap: 10px;
+    
+}
+.infodiv{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    background: rgba(255, 255, 255, 0.294);
+   
+   
+}
+.info{
+    text-align: start;
+    padding-left: 10px;
+    box-shadow: 2px 2px 12px 1px black;
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+}
+.info>h1{
+    font-size: 25px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.imginfo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+}
+
+.imginfo>h1{
+    font-size: 50px;
+    margin-top: 20%;
+}
+
+.imginfo>video{
+    height: 60%;
+    width: 100%;
+    mix-blend-mode:multiply;
+}
+form{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+form>input{
+    width: 65%;
+    margin-left: 45px;
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: transparent;
+}
+form>button{
+    width: 90px;
+    height: 37px;
+    margin-top: 20px;
+    border-radius:10px;
+    padding-left: 2px;
+    padding-right:2px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    
+   
+
+}
+
+form>button:active{
+    scale: .9;
+}
+form>button:hover{
+    background: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+.container{
+    max-width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.294);
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: repeat(1fr);
+    padding: 20px;
+    gap: 5px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    
+}
+
+.temp_list{
+    /* border: 2px solid white; */
+    text-align: center;
+    color: white;
+    height: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+    
+}
+
+.temp_list:hover{
+    box-shadow: 2px 2px 2px 2px black;
+    
+}
+
+
+.temp_list>video{
+    height: 70px;
+    width: 100px;
+    margin-left: 8px;
+    mix-blend-mode: multiply;
+}
+
+
+/* graphs */
+
+#chart_div{
+    width: 500px;
+    height: 100px;
+}
+
+/* google map */
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    width:100%;
+    height:100vh;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    width:100%;
+    height:100%;
+}
+
+.gmap_iframe {
+    height:100% !important;
+}
